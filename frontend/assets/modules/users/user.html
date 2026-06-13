@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Management</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+   
+</head>
+<body>
+<div class="container">
+    <div class="sidebar">
+        <h2>ERP System</h2>
+        <ul>
+    <li><a href="/assets/modules/dashboard.html?v=2">Dashboard</a></li>
+    <li><a href="/assets/modules/users/user.html?v=2">Users</a></li>
+    <li><a href="/assets/modules/products/products.html?v=2">Products</a></li>
+    <li><a href="/assets/modules/suppliers/suppliers.html?v=2">Suppliers</a></li>
+            <li><a href="/assets/modules/inventory/inventory.html?v=2">Inventory</a></li>
+            <li><a href="/assets/modules/transactions/transactions.html?v=2">Transactions</a></li>
+            <li><a href="/assets/modules/alerts/alerts.html?v=2">Alerts</a></li>
+</ul>
+<div class="profile-section">
+    <div class="profile-info">
+        <h4 id="profileName"></h4>
+        <p id="profileRole"></p>
+    </div>
+    <button
+        class="logout-btn"
+        onclick="logout()">
+        Logout
+    </button>
+</div>
+    </div> 
+    <div class="main-content" id="adminSection">
+        <h1>User Management</h1>
+        <div class="form-container">
+            <input type="text" id="username" placeholder="Username">
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+            <input type="text" id="role" placeholder="Role">
+            <button id="saveBtn" onclick="saveUser()">
+             Save User
+            </button>
+        </div>
+        <br>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="userTable">
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="../../js/auth.js"></script>
+<script src="../../js/profile.js"></script>
+<script src="../../js/app.js"></script>
+</body>
+</html>
+

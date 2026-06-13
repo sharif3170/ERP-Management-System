@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Management</title>
+   <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+<div class="container">
+    <div class="sidebar">
+        <h2>ERP System</h2>
+        <ul>
+            <li><a href="/assets/modules/dashboard.html?v=2">Dashboard</a></li>
+            <li><a href="/assets/modules/users/user.html?v=2">Users</a></li>
+            <li><a href="/assets/modules/products/products.html?v=2">Products</a></li>
+            <li><a href="/assets/modules/suppliers/suppliers.html?v=2">Suppliers</a></li>
+            <li><a href="/assets/modules/inventory/inventory.html?v=2">Inventory</a></li>
+            <li><a href="/assets/modules/transactions/transactions.html?v=2">Transactions</a></li>
+            <li><a href="/assets/modules/alerts/alerts.html?v=2">Alerts</a></li>
+        </ul>
+        <div class="profile-section">
+            <h4 id="profileName">User</h4>
+            <p id="profileRole">Role</p>
+            <button onclick="logout()">
+                Logout
+            </button>
+        </div>
+    </div>
+    <div class="main-content">
+        <h1>Product Management</h1>
+        
+        <div class="form-container">
+            <input type="text" id="productName" placeholder="Product Name">
+            <input type="text" id="category" placeholder="Category">
+            <input type="text" id="description" placeholder="Description">
+            <input type="number" id="price" placeholder="Price">
+            <input type="number" id="reorderLevel" placeholder="Reorder Level">
+            <br>
+            
+            <button id="productBtn" onclick="saveProduct()">
+                Save Product
+            </button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Reorder Level</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="productTable">
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="../../js/product.js"></script>
+<script src="../../js/profile.js"></script>
+</body>
+</html>
+

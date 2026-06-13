@@ -1,0 +1,6 @@
+com\erp\management\entity\Alert.class
+com\erp\management\repository\AlertRepository.class
+com\erp\management\repository\TransactionRepository.class
+com\erp\management\controller\TransactionController.class
+com\erp\management\controller\AlertController.class
+com\erp\management\entity\Transaction.class

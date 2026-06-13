@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transactions Management</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+<div class="container">
+    <div class="sidebar">
+        <h2>ERP System</h2>
+        <ul>
+            <li><a href="/assets/modules/dashboard.html?v=2">Dashboard</a></li>
+            <li><a href="/assets/modules/users/user.html?v=2">Users</a></li>
+            <li><a href="/assets/modules/products/products.html?v=2">Products</a></li>
+            <li><a href="/assets/modules/suppliers/suppliers.html?v=2">Suppliers</a></li>
+            <li><a href="/assets/modules/inventory/inventory.html?v=2">Inventory</a></li>
+            <li><a href="/assets/modules/transactions/transactions.html?v=2">Transactions</a></li>
+            <li><a href="/assets/modules/alerts/alerts.html?v=2">Alerts</a></li>
+        </ul>
+        <div class="profile-section">
+            <h4 id="profileName">User</h4>
+            <p id="profileRole">Role</p>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+    <div class="main-content">
+        <h1>Transactions Management</h1>
+        
+        <div class="form-container" id="transactionForm">
+            <input type="number" id="productId" placeholder="Product ID">
+            <input type="text" id="transactionType" placeholder="Transaction Type (e.g., IN, OUT)">
+            <input type="number" id="quantity" placeholder="Quantity">
+            <br>
+            <button id="transactionBtn" onclick="saveTransaction()">Save Transaction</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Product ID</th>
+                    <th>Type</th>
+                    <th>Quantity</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="transactionTable">
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="../../js/transaction.js"></script>
+<script src="../../js/profile.js"></script>
+</body>
+</html>
+
